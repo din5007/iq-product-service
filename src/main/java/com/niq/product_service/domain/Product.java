@@ -13,16 +13,13 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Product {
+  @Id
+  @Column(nullable = false, unique = true, name = "product_id")
+  private String productId;
 
-    @Id
-    @SequenceGenerator(name = "product_id_seq", sequenceName = "product_id_seq", allocationSize = 1)
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "product_id_seq")
-    private long id;
+  @Column(nullable = false)
+  private String brand;
 
-    @Column(nullable = false, unique = true)
-    private String productId;
-    @Column(nullable = false)
-    private String brand;
-    @Column(nullable = false)
-    private String category;
+  @Column(nullable = false)
+  private String category;
 }

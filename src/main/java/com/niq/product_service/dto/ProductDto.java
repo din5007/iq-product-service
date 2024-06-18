@@ -9,10 +9,12 @@ import lombok.*;
 @Getter
 @Setter
 public class ProductDto {
-    @JsonProperty("productId")
-    private String productId;
-    @JsonProperty("brand")
-    private String brand;
-    @JsonProperty("category")
-    private String category;
+  @JsonProperty("productId")
+  private String productId;
+
+  @JsonProperty("brand")
+  private String brand;
+
+  @JsonProperty("category")
+  private String category;
 }
